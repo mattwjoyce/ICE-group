@@ -1,0 +1,50 @@
+body {
+	background-color: lightblue;
+}
+
+#title {
+	text-align: center;
+	font-size: 60px;
+	margin-top: 2%;
+}
+
+
+table {
+	table-layout: fixed;
+	width: 80%;
+	margin: auto;	
+}
+
+tr, td {
+	border-style: solid;
+	border-color: black;
+	text-align: center;
+	font-size: 125%;
+	background-color: rgb(0, 116, 166);
+	color: white;
+}
+
+.navBar * td {
+	padding: 1%;
+}
+
+.teamLogosBar{
+	margin-top: 1%;
+}
+
+.teamLogosBar * img {
+	width: 100%;
+}
+
+.teamLogosBar * td {
+	padding: 0.5%;
+}
+
+.navBar {
+	margin-top: 0.5%;
+}
+
+
+td:hover {
+	background-color: rgb(0, 173, 247);
+}
