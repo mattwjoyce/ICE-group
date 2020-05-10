@@ -1,6 +1,6 @@
 <!-- Teams list -->
 <div id="teamList">
-  <table style="border-style: solid">
+  <table style="border-style: solid;">
     <tr>
       <th>Team</th>
       <th>Logo</th>
@@ -13,7 +13,25 @@
   <br><br>
 </div>
 
+<!-- Results for a round of games  -->
+<div id="roundResults">
+  <table style="text-align: center;">
+    <tr>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Score</th>
+      <th>Winner</th>
+    </tr>
+    <tr *ngFor="let game of games">
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+      <td>{{game.hscore}}-{{game.ascore}}</td>
+      <td>{{game.winner}}</td>
+    </tr>
+  </table>
+</div>
 
+<br><br>
 
 
 
