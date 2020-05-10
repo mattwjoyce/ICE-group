@@ -7,11 +7,11 @@ import { Tip } from '../tip';
 import { Ladder } from '../ladder';
 
 @Component({
-  selector: 'app-view-league-table',
-  templateUrl: './view-league-table.component.html',
-  styleUrls: ['./view-league-table.component.css']
+  selector: 'app-view-teams',
+  templateUrl: './view-teams.component.html',
+  styleUrls: ['./view-teams.component.css']
 })
-export class ViewLeagueTableComponent implements OnInit {
+export class ViewTeamsComponent implements OnInit {
 
   teams:Team[];
   games:Game[];

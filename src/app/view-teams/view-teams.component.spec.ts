@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewLeagueTableComponent } from './view-league-table.component';
+import { ViewTeamsComponent } from './view-teams.component';
 
-describe('ViewLeagueTableComponent', () => {
-  let component: ViewLeagueTableComponent;
-  let fixture: ComponentFixture<ViewLeagueTableComponent>;
+describe('ViewTeamsComponent', () => {
+  let component: ViewTeamsComponent;
+  let fixture: ComponentFixture<ViewTeamsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewLeagueTableComponent ]
+      declarations: [ ViewTeamsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewLeagueTableComponent);
+    fixture = TestBed.createComponent(ViewTeamsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

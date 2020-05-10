@@ -13,8 +13,8 @@ import { Ladder } from './ladder';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Team Exlorer Pro';
-
+  title = 'Team Explorer Pro';
+  
   teams:Team[];
 
   constructor(private dataService: DataServiceService) { }
