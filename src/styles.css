@@ -38,6 +38,7 @@ tr, td {
 
 .teamLogosBar * td {
 	padding: 0.5%;
+	background-color: white;
 }
 
 .navBar {

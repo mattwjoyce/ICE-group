@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataServiceService } from './data-service.service';
+import { Team } from './team';
+import { Game } from './game';
+import { Tip } from './tip';
+import { Ladder } from './ladder';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +14,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ass';
+
+  teams:Team[];
+
+  constructor(private dataService: DataServiceService) { }
+
+  ngOnInit() {
+    this.getAFLTeams();
+  }
+
+  getAFLTeams(): void {
+    this.dataService.getTeams().subscribe(temp => { this.teams = temp;});
+  }
+
 }

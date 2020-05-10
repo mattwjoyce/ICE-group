@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html>
+<header id="title">Team Explorer Pro</header>
+  
+  <div>
+  	<table class="teamLogosBar">
+  	<tr >
+			<td *ngFor="let team of teams"><img src="https://squiggle.com.au{{team.logo}}"></td>  		
+  	</tr>
+  </table>  	
+  </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <nav>
+  	<table class="navBar">
+  	<tr>
+  		<td id="homeLink">Home</td>
+  		<td id="ladderLink">Ladder</td>
+  		<td id="fixtureLink">Fixture</td>
+  		<td id="teamsLink">Teams</td>
+  		<td id="predLinks">Predictions</td>
+  	</tr>
 
-</head>
-
-<body>
-
-</body>
-
-</html>
+  </table>
+  </nav>
+  
+  <br><br>
+  <app-view-league-table></app-view-league-table>
