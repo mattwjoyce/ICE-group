@@ -13,7 +13,7 @@ import { Ladder } from './ladder';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ass';
+  title = 'Team Exlorer Pro';
 
   teams:Team[];
 
