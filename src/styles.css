@@ -27,6 +27,15 @@ tr, td {
 	padding: 1%;
 }
 
+.navBar * a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.navBar * a:active {
+	background-color: rgb(0, 116, 166);
+}
+
 .teamLogosBar{
 	margin-top: 1%;
 }
