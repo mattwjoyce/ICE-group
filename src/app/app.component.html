@@ -1,10 +1,8 @@
-<script src="myScript.js"></script>
-
 <header id="title">Team Explorer Pro</header>
   
   <div>
   	<table class="teamLogosBar">
-  	<tr >
+  	<tr>
 			<td *ngFor="let team of teams"><img src="https://squiggle.com.au{{team.logo}}"></td>  		
   	</tr>
   </table>  	
@@ -16,7 +14,7 @@
   		  <td id="homeLink">Home</td>
   		  <td id="ladderLink">Ladder</td>
   		  <td id="fixtureLink">Fixture</td>
-  		  <td id="teamsLink">Teams</td>
+  		  <td id="teamsLink"><a routerLink="/view-teams">Teams</a></td>
   		  <td id="predLinks">Predictions</td>
   	  </tr>
     </table>
@@ -24,4 +22,6 @@
   
   <br><br>
 
-  <div id="compChange"></div>
+  <main>
+		<router-outlet></router-outlet>    
+	</main>
