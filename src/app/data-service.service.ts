@@ -49,7 +49,7 @@ export class DataServiceService {
         ))) 
       ); 
         } 
-    getGames() : Observable<Game[]> {    
+    getR20Games() : Observable<Game[]> {    
       return this.http.get('https://api.squiggle.com.au/?q=games;round=20;year=2019').pipe( 
         map((data: any) => data.games.map((item: any) => new Game( 
           item.complete, 
@@ -77,8 +77,36 @@ export class DataServiceService {
         ))) 
       );  
         }
+    getR19Games() : Observable<Game[]> {    
+      return this.http.get('https://api.squiggle.com.au/?q=games;round=19;year=2019').pipe( 
+        map((data: any) => data.games.map((item: any) => new Game( 
+          item.complete, 
+          item.is_grand_final, 
+          item.tz, 
+          item.hbehinds, 
+          item.ateam, 
+          item.winnerteamid, 
+          item.hgoals, 
+          item.updated,
+          item.round, 
+          item.is_final, 
+          item.hscore, 
+          item.abehinds, 
+          item.winner, 
+          item.ascore, 
+          item.hteam, 
+          item.ateamid, 
+          item.venue, 
+          item.hteamid, 
+          item.agoals, 
+          item.year, 
+          item.date, 
+          item.id 
+        ))) 
+      );  
+        }
     getLadder() : Observable<Ladder[]> {    
-      return this.http.get('https://api.squiggle.com.au/?q=ladder;year=2019;round=19').pipe( 
+      return this.http.get('https://api.squiggle.com.au/?q=ladder;year=2019;round=19;source=1').pipe( 
         map((data: any) => data.ladder.map((item: any) => new Ladder( 
           item.round, 
           item.wins, 

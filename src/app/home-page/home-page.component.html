@@ -1,0 +1,44 @@
+<!-- Results for a round of games  -->
+<section id="roundResults">
+  <table style="text-align: center;">
+    <th>Round 19 Results</th>
+    <tr>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Score</th>
+      <th>Winner</th>
+    </tr>
+    <tr *ngFor="let game of games">
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+      <td>{{game.hscore}}-{{game.ascore}}</td>
+      <td>{{game.winner}}</td>
+    </tr>
+  </table>
+</section>
+
+<!-- favourite team selector -->
+<aside>
+
+</aside>
+
+<br><br>
+<!-- next upcoming match -->
+<aside>
+  <table style="text-align: center;">
+    <th>Upcoming Game</th>
+    <tr>
+      <th>Home Team</th>
+      <th>Away Team</th>
+    </tr>
+    <tr *ngFor="let game of upcomingGames">
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+    </tr>
+  </table>
+</aside>
+
+<!-- current ladder before r20 -->
+<aside>
+
+</aside>
