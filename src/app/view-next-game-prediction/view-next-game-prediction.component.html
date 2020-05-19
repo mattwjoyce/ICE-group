@@ -9,10 +9,11 @@
     </tr>
     <tr>
       <ng-container *ngFor="let tip of tips">
+        <!-- add team logos too, will need to make new if statements-->
         <ng-container *ngIf="tip.hteam == 'Carlton' || tip.ateam == 'Carlton'">
           <td>{{tip.hteam}}</td>
           <td>{{tip.ateam}}</td>
-          <td>{{tip.tip}}</td>
+          <td style="background-color: greenyellow; color: black;">{{tip.tip}}</td>
         </ng-container>
       </ng-container>
     </tr>
