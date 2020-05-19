@@ -1,7 +1,7 @@
 <!-- Results for a round of games  -->
 <section id="roundResults">
   <table style="text-align: center;">
-    <th>Round 19 Results</th>
+    <th colspan="4">Round 19 Results<br><br></th>
     <tr>
       <th>Home Team</th>
       <th>Away Team</th>
@@ -24,14 +24,17 @@
 
 <br><br>
 <!-- next upcoming match -->
+
 <aside>
   <table style="text-align: center;">
-    <th>Upcoming Game</th>
+    <th colspan="3">Upcoming Game<br><br></th>
     <tr>
+      <td>GameID</td>
       <th>Home Team</th>
       <th>Away Team</th>
     </tr>
     <tr *ngFor="let game of upcomingGames">
+      <td>{{game.id}}</td>
       <td>{{game.hteam}}</td>
       <td>{{game.ateam}}</td>
     </tr>
@@ -42,3 +45,7 @@
 <aside>
 
 </aside>
+
+<script>
+
+</script>

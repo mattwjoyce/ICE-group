@@ -4,7 +4,7 @@ body {
 
 #title {
 	text-align: center;
-	font-size: 60px;
+	font-size: 300%;
 	margin-top: 2%;
 }
 
@@ -21,6 +21,11 @@ tr, td {
 	font-size: 125%;
 	background-color: rgb(0, 116, 166);
 	color: white;
+}
+
+th {
+	text-align: center;
+	font-size: 125%;
 }
 
 .navBar * td {

@@ -16,14 +16,22 @@ export class HomePageComponent implements OnInit {
   games:Game[];
   upcomingGames:Game[];
   ladder:Ladder[];
+  
 
-  constructor(private dataService: DataServiceService) { }
+  constructor(private dataService: DataServiceService) {
+
+  }
 
   ngOnInit(){
     this.getAFLTeams();
     this.getR19Games();
     this.getR20Games();
     this.getLadder();
+
+    function sortGamesById(a, b) {
+      return a.id - b.id;
+    }  
+
   }
 
   getAFLTeams(): void {

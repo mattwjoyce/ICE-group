@@ -9,13 +9,15 @@ import { ViewUserStoriesComponent } from './view-user-stories/view-user-stories.
 import { ViewTeamsComponent } from './view-teams/view-teams.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { DataServiceService } from './data-service.service';
+import { ViewNextGamePredictionComponent } from './view-next-game-prediction/view-next-game-prediction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewTeamsComponent,
     HomePageComponent,
-    ViewUserStoriesComponent
+    ViewUserStoriesComponent,
+    ViewNextGamePredictionComponent
   ],
   imports: [
     BrowserModule,

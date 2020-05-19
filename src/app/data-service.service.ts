@@ -24,7 +24,7 @@ export class DataServiceService {
     ); 
       }
     getTips() : Observable<Tip[]> { 
-      return this.http.get('https://api.squiggle.com.au/?q=tips;year=2019;round=20').pipe(
+      return this.http.get('https://api.squiggle.com.au/?q=tips;year=2019;round=20;source=1').pipe(
         map((data: any) => data.tips.map((item: any) => new Tip( 
           item.confidence, 
           item.bits, 
