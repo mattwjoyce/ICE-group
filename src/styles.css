@@ -21,6 +21,11 @@ tr, td {
 	font-size: 125%;
 	background-color: rgb(0, 116, 166);
 	color: white;
+	text-decoration: solid;
+}
+
+td a:active {
+	background-color: rgb(0, 173, 247);
 }
 
 th {
@@ -28,28 +33,24 @@ th {
 	font-size: 125%;
 }
 
-.navBar * td {
+.navBar td {
 	padding: 1%;
 }
 
-.navBar * a:visited {
+.navBar a:visited {
 	text-decoration: none;
 	color: white;
-}
-
-.navBar * a:active {
-	background-color: rgb(0, 116, 166);
 }
 
 .teamLogosBar{
 	margin-top: 1%;
 }
 
-.teamLogosBar * img {
+.teamLogosBar img {
 	width: 100%;
 }
 
-.teamLogosBar * td {
+.teamLogosBar td {
 	padding: 0.5%;
 	background-color: white;
 }
@@ -58,6 +59,7 @@ th {
 	margin-top: 0.5%;
 }
 
-.navBar * td:hover, .teamLogosBar * td:hover {
+.navBar td:hover, .teamLogosBar td:hover {
 	background-color: rgb(0, 173, 247);
 }
+
