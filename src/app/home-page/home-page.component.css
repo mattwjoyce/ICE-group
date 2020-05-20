@@ -1,0 +1,8 @@
+#favTeamDiv {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}

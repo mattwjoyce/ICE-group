@@ -17,13 +17,20 @@
   </table>
 </section>
 
-<!-- favourite team selector -->
-<aside>
-  <div id="favTeamSelector">
-    
-  </div>
+<br><br>
 
-</aside>
+<!-- favourite team selector -->
+<div id="favTeamDiv">
+  <aside>
+    <h2>Favourite Team</h2>
+    <select id="favTeamSelector">
+      <option *ngFor="let team of teams" value="{{team.name}}" (click)="onSelect(team)">{{team.name}}</option>
+    </select>
+    <ng-container *ngIf="favouriteTeam">
+      <img src="https://squiggle.com.au/{{favouriteTeam.logo}}">
+    </ng-container>
+  </aside>
+</div>
 
 <br><br>
 

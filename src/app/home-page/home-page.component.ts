@@ -13,21 +13,18 @@ import { Ladder } from '../ladder';
 export class HomePageComponent implements OnInit {
 
   teams:Team[];
+  favouriteTeam:Team;
   games:Game[];
   upcomingGames:Game[];
   ladder:Ladder[];
-  
 
-  constructor(private dataService: DataServiceService) {
-
-  }
+  constructor(private dataService: DataServiceService) { }
 
   ngOnInit(){
     this.getAFLTeams();
     this.getR19Games();
     this.getR20Games();
     this.getLadder();
-
   }
 
   getAFLTeams(): void {
@@ -43,6 +40,10 @@ export class HomePageComponent implements OnInit {
       this.upcomingGames = temp;
       this.upcomingGames.sort(this.sortUpcomingGamesById);      
     });
+  }
+
+  onSelect(team: Team): void{
+    this.favouriteTeam = team;
   }
 
   /* Sort round 20 games in order of their scheduled time */
@@ -81,5 +82,6 @@ export class HomePageComponent implements OnInit {
 
     return compare;
   }
+
   
 }
