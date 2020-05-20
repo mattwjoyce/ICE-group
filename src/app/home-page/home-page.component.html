@@ -19,33 +19,55 @@
 
 <!-- favourite team selector -->
 <aside>
+  <div id="favTeamSelector">
+    
+  </div>
 
 </aside>
 
 <br><br>
-<!-- next upcoming match -->
 
-<aside>
+<!-- next upcoming match -->
+<aside id="nextUpcomingMatch">
   <table style="text-align: center;">
-    <th colspan="3">Upcoming Game<br><br></th>
+    <th colspan="4">Upcoming Game<br><br></th>
     <tr>
-      <td>GameID</td>
       <th>Home Team</th>
       <th>Away Team</th>
+      <th>Venue</th>
+      <th>Scheduled Date</th>
     </tr>
-    <tr *ngFor="let game of upcomingGames">
-      <td>{{game.id}}</td>
-      <td>{{game.hteam}}</td>
-      <td>{{game.ateam}}</td>
+    <tr>
+      <td>{{upcomingGames[0].hteam}}</td>
+      <td>{{upcomingGames[0].ateam}}</td>
+      <td>{{upcomingGames[0].venue}}</td>
+      <td>{{upcomingGames[0].date | date:'medium'}}</td>
     </tr>
   </table>
 </aside>
 
+<br><br>
+
 <!-- current ladder before r20 -->
-<aside>
+<aside id="currentTopEight">
+  <table style="text-align: left;">
+    <th colspan="2">Current Top 8 Teams<br><br></th>
+    <tr>
+      <td>1. {{ladder[0].team}}</td>
+      <td>5. {{ladder[4].team}}</td>
+    </tr>
+    <tr>
+      <td>2. {{ladder[1].team}}</td>
+      <td>6. {{ladder[5].team}}</td>
+    </tr>
+    <tr>
+      <td>3. {{ladder[2].team}}</td>
+      <td>7. {{ladder[6].team}}</td>
+    </tr>
+    <tr>
+      <td>4. {{ladder[3].team}}</td>
+      <td>8. {{ladder[7].team}}</td>
+    </tr>
+  </table>
 
 </aside>
-
-<script>
-
-</script>

@@ -28,10 +28,6 @@ export class HomePageComponent implements OnInit {
     this.getR20Games();
     this.getLadder();
 
-    function sortGamesById(a, b) {
-      return a.id - b.id;
-    }  
-
   }
 
   getAFLTeams(): void {
@@ -43,11 +39,47 @@ export class HomePageComponent implements OnInit {
   }
 
   getR20Games(): void {
-    this.dataService.getR20Games().subscribe(temp => { this.upcomingGames = temp;});
+    this.dataService.getR20Games().subscribe(temp => { 
+      this.upcomingGames = temp;
+      this.upcomingGames.sort(this.sortUpcomingGamesById);      
+    });
   }
 
+  /* Sort round 20 games in order of their scheduled time */
+  sortUpcomingGamesById(a, b) {
+    const gameAId = a.id;
+    const gameBId = b.id;
+    let compare = 0;
+    
+    if(gameAId > gameBId) {
+      compare = 1;
+    } else if (gameAId < gameBId) {
+      compare = -1;
+    }
+
+    return compare;
+  }  
+
   getLadder(): void {
-    this.dataService.getLadder().subscribe(temp => { this.ladder = temp;});
+    this.dataService.getLadder().subscribe(temp => { 
+      this.ladder = temp;
+      this.ladder.sort(this.sortLadder);
+    });
+  }
+
+  /* Sort current team ranking at round 19 completion */
+  sortLadder(a, b) {
+    const teamARank = a.rank;
+    const teamBRank = b.rank;
+    let compare = 0;
+    
+    if(teamARank > teamBRank) {
+      compare = 1;
+    } else if (teamARank < teamBRank) {
+      compare = -1;
+    }
+
+    return compare;
   }
   
 }
