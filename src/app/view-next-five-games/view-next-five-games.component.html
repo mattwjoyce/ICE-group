@@ -1,0 +1,18 @@
+<!-- Results for favourite team in each completed round  -->
+<section id="nextFive">
+  <table style="text-align: center;">
+    <th colspan="4">Next 5 games for *favourite team*<br><br></th>
+    <tr>
+      <th>Round</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor="let game of nextFiveGames">
+      <td>{{game.round}}</td>
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+      <td>{{game.date | date:'medium'}}</td>
+    </tr>
+  </table>
+</section>

@@ -4,12 +4,17 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ViewTeamsComponent } from './view-teams/view-teams.component';
+
+import { DataServiceService } from './data-service.service';
 import { AppComponent } from './app.component';
 import { ViewUserStoriesComponent } from './view-user-stories/view-user-stories.component';
-import { ViewTeamsComponent } from './view-teams/view-teams.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { DataServiceService } from './data-service.service';
 import { ViewNextGamePredictionComponent } from './view-next-game-prediction/view-next-game-prediction.component';
+import { ViewTeamSeasonResultsComponent } from './view-team-season-results/view-team-season-results.component';
+import { ViewNextFiveGamesComponent } from './view-next-five-games/view-next-five-games.component';
+import { ViewVenuesWonComponent } from './view-venues-won/view-venues-won.component';
+import { ViewRivalGamesComponent } from './view-rival-games/view-rival-games.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,11 @@ import { ViewNextGamePredictionComponent } from './view-next-game-prediction/vie
     ViewTeamsComponent,
     HomePageComponent,
     ViewUserStoriesComponent,
-    ViewNextGamePredictionComponent
+    ViewNextGamePredictionComponent,
+    ViewTeamSeasonResultsComponent,
+    ViewNextFiveGamesComponent,
+    ViewVenuesWonComponent,
+    ViewRivalGamesComponent
   ],
   imports: [
     BrowserModule,

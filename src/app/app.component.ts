@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { DataServiceService } from './data-service.service';
 import { Team } from './team';
-import { Game } from './game';
-import { Tip } from './tip';
-import { Ladder } from './ladder';
 
 
 @Component({

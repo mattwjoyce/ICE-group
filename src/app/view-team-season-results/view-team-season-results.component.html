@@ -1,0 +1,20 @@
+<!-- Results for favourite team in each completed round  -->
+<section id="completedResults">
+  <table style="text-align: center;">
+    <th colspan="5">*favourite team* results for all completed rounds<br><br></th>
+    <tr>
+      <th>Round</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Score</th>
+      <th>Winner</th>
+    </tr>
+    <tr *ngFor="let game of favCompletedGames">
+      <td>{{game.round}}</td>
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+      <td>{{game.hscore}}-{{game.ascore}}</td>
+      <td>{{game.winner}}</td>
+    </tr>
+  </table>
+</section>
