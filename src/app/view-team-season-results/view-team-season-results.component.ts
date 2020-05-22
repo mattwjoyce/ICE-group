@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
 import { Game } from '../game';
+import { Team } from '../team';
+import { FavouriteTeamService } from '../favourite-team.service';
+
 
 @Component({
   selector: 'app-view-team-season-results',
@@ -10,11 +13,14 @@ import { Game } from '../game';
 export class ViewTeamSeasonResultsComponent implements OnInit {
 
   favCompletedGames:Game[];
+  favouriteTeam: Team;
 
-  constructor(private dataService: DataServiceService) { }
+    constructor(private dataService: DataServiceService,private FavouriteTeamService:FavouriteTeamService) { }
 
   ngOnInit() {
     this.getFavCompletedGames();
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
+ 
   }
 
   getFavCompletedGames(): void{
@@ -24,7 +30,7 @@ export class ViewTeamSeasonResultsComponent implements OnInit {
 
       // loop through array of 2019 games, find games with favourite team and before round 20
       temp.forEach(element => {
-        if((element.hteam == 'Carlton' || element.ateam == 'Carlton') && element.round < 20) tempArr.push(element);
+        if((element.hteam == this.favouriteTeam.name || element.ateam == this.favouriteTeam.name) && element.round < 20) tempArr.push(element);
       });
 
       this.favCompletedGames = tempArr;
