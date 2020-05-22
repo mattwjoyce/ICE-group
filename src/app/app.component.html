@@ -1,30 +1,49 @@
-<header id="title"><a routerLink="/view-user-stories">Team Explorer Pro</a></header>
-  
-  <div>
-  	<table class="teamLogosBar">
-  	<tr>
-			<td *ngFor="let team of teams"><img src="https://squiggle.com.au{{team.logo}}"></td>  		
-  	</tr>
-  </table>  	
-  </div>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!-- Toolbar with logos -->
+<div class = "container">
 
-  <nav>
-  	<table class="navBar">
-  	  <tr>
-				<td><a routerLink="/home-page">User Story 1</a></td>
-				<td><a routerLink="/view-next-game-prediction">User Story 2</a></td>
-				<td><a routerLink="/view-team-season-results">User Story 3</a></td>
-				<td><a routerLink="/view-next-five-games">User Story 4</a></td>
-				<td><a routerLink="/view-venues-won">User Story 5</a></td>
-				<td><a routerLink="/">User Story 6</a></td>
-				<td><a routerLink="/">User Story 7</a></td>
-				<td><a routerLink="/">User Story 8</a></td>
-  	  </tr>
-    </table>
-  </nav>
-  
-  <br><br>
+	<div class = "row">
+		<div class="toolbar" role="banner">
+		   <input class = "teamLogo"  *ngFor="let team of teams" value="{{team.name}}" type = "image"  (click)="onSelect(team)"
+			   src="https://squiggle.com.au{{team.logo}}"
+			   title = {{team.name}}  alt = {{team.name}}>
+	   </div>
 
-  <main>
-		<router-outlet></router-outlet>    
-	</main>
+	   <!--<app-favourite-team [favouriteTeam]="favouriteTeam"></app-favourite-team>-->
+   </div>
+
+
+<!--navbar-->
+<div class = "row">
+   <ul id="navigation_bar">
+	   <li> <div class ="logo">
+		   <a routerLink="/view-user-stories"> <img width="40" alt="AFL Logo" 
+			   src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=1200&height=630"></a>
+		   </div>	
+	  </li>
+			
+		   <li><a routerLink="/home-page">User Story 1</a></li>
+		   <li ><a routerLink="/view-next-game-prediction">User Story 2</a></li>
+		   <li ><a  routerLink="/view-team-season-results">User Story 3</a></li>
+		   <li ><a  routerLink="/view-next-five-games">User Story 4</a></li>
+		   <li ><a  routerLink="/view-venues-won">User Story 5</a></li>
+		   <li ><a  routerLink="/">User Story 6</a></li>
+		   <li ><a  routerLink="/">User Story 7</a></li>
+		   <li ><a  routerLink="/">User Story 8</a></li>
+   </ul>
+
+   <!-- Team Explorer Pro !! =D -->
+<div class = "row"> 
+   <div class = "TEP"> <strong>Team Explorer Pro </strong>
+</div>
+<p> favourite team = {{favouriteTeam.name}}
+</div>
+
+ <main>
+	   <router-outlet></router-outlet>    
+   </main>
+
+</div>
+</div> 
