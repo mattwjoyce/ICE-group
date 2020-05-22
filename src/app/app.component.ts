@@ -11,12 +11,18 @@ import { Team } from './team';
 export class AppComponent {
   title = 'Team Explorer Pro';
   
+  favouriteTeam:Team; 
   teams:Team[];
 
   constructor(private dataService: DataServiceService) { }
 
   ngOnInit() {
     this.getAFLTeams();
+  }
+
+  onSelect(team: Team): void{
+    this.favouriteTeam = team;
+
   }
 
   getAFLTeams(): void {
