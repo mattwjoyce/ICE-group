@@ -1,40 +1,31 @@
-<!-- Results for a round of games  -->
-<section id="roundResults">
-  <table style="text-align: center;">
-    <th colspan="4">Round 19 Results<br><br></th>
-    <tr>
-      <th>Home Team</th>
-      <th>Away Team</th>
-      <th>Score</th>
-      <th>Winner</th>
-    </tr>
-    <tr *ngFor="let game of games">
-      <td>{{game.hteam}}</td>
-      <td>{{game.ateam}}</td>
-      <td>{{game.hscore}}-{{game.ascore}}</td>
-      <td>{{game.winner}}</td>
-    </tr>
-  </table>
-</section>
-
-<br><br>
-
+<div class="row">
+  <div class = "col">
+    <section id="roundResults">
+      <table style="text-align: center;">
+        <th colspan="4">Round 19 Results<br><br></th>
+        <tr>
+          <th>Home Team</th>
+          <th>Away Team</th>
+          <th>Score</th>
+          <th>Winner</th>
+        </tr>
+        <tr *ngFor="let game of games">
+          <td>{{game.hteam}}</td>
+          <td>{{game.ateam}}</td>
+          <td>{{game.hscore}}-{{game.ascore}}</td>
+          <td>{{game.winner}}</td>
+        </tr>
+      </table>
+    </section>
+    </div>
+<div class="col">
 <!-- favourite team selector -->
-<div id="favTeamDiv">
-  <aside>
-    <h2>Favourite Team</h2>
-    <select id="favTeamSelector">
-      <option *ngFor="let team of teams" value="{{team.name}}" (click)="onSelect(team)">{{team.name}}</option>
-    </select>
-    <ng-container *ngIf="favouriteTeam">
-      <img src="https://squiggle.com.au/{{favouriteTeam.logo}}">
-    </ng-container>
-  </aside>
-</div>
+<div class="row">
 
-<br><br>
 
 <!-- next upcoming match -->
+<div class="row">
+<div class="col">
 <aside id="nextUpcomingMatch">
   <table style="text-align: center;">
     <th colspan="4">Upcoming Game<br><br></th>
@@ -52,10 +43,13 @@
     </tr>
   </table>
 </aside>
-
+</div>
+</div>
 <br><br>
 
 <!-- current ladder before r20 -->
+<div class="row">
+<div class="col">
 <aside id="currentTopEight">
   <table style="text-align: left;">
     <th colspan="2">Current Top 8 Teams<br><br></th>
@@ -76,5 +70,15 @@
       <td>8. {{ladder[7].team}}</td>
     </tr>
   </table>
-
 </aside>
+</div>
+</div>
+</div>
+
+
+<!-- Results for a round of games  -->
+
+
+<br><br>
+</div>
+
