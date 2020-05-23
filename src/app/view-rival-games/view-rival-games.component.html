@@ -1,1 +1,64 @@
-<p>view-rival-games works!</p>
+<!-- Results for favourite team vs chosen rival  -->
+<!-- Sidebar -->
+<aside>
+  <div class = "container">
+       <!-- Rival Team card --> 
+   <div *ngIf="favouriteTeam; else elseBlock">
+      <section id = rivalTeamCard> 
+        <div class = "card text-center" style="width: 18rem;">
+          <div class="card-header">Rival Team</div>
+      
+          <div class="avatar mx-auto white"><img src=""></div>
+            <div class ="card-body">
+              <h5 class="font-weight-bold text-uppercase mb-3">*rivalTeam name*</h5><hr>
+              <p class="card-text"> balhblahblah
+              </p>
+            </div>
+          </div>
+        </section>
+        </div>
+
+          <ng-template #elseBlock> 
+            <section id = rivalTeamCard> 
+              <div class = "card text-center" style="width: 18rem;">
+                <div class="card-header">Rival Team</div>
+                <div class="avatar mx-auto white">
+                <img src=""></div>
+              <div class ="card-body">
+              <h5 class="font-weight-bold text-uppercase mb-3">
+              Pick your rival Team!
+              </h5><hr>
+              <p class="card-text"> balhblahblah
+              </p>
+            </div>
+          </div>
+          </section>
+          </ng-template>          
+            
+    <br> <br>
+  </div>
+</aside>
+
+<!-- Display fixtures of favouriteTeam vs rivalTeam -->
+
+<section id="completedResults">
+  <table style="text-align: center;">
+    <th colspan="5">{{favouriteTeam.name}} vs *rival team* games this season<br><br></th>
+    <tr>
+      <th>Round</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Score</th>
+      <th>Winner</th>
+    </tr>
+    <tr *ngFor="let game of games">
+      <ng-container *ngIf="(game.hteam == favouriteTeam && game.ateam == 'Carlton') || (game.ateam == favouriteTeam && game.hteam == 'Carlton')">
+        <td>{{game.round}}</td>
+        <td>{{game.hteam}}</td>
+        <td>{{game.ateam}}</td>
+        <td *ngIf="game.round < 19">{{game.hscore}}-{{game.ascore}}</td>
+        <td *ngIf="game.round < 19">{{game.winner}}</td>
+      </ng-container>
+    </tr>
+  </table>
+</section>
