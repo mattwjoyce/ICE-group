@@ -4,6 +4,7 @@ import { DataServiceService } from '../data-service.service';
 import { Team } from '../team';
 import { Game } from '../game';
 import { Ladder } from '../ladder';
+import { FavouriteTeamService } from '../favourite-team.service';
 
 @Component({
   selector: 'app-home-page',
@@ -18,13 +19,16 @@ export class HomePageComponent implements OnInit {
   upcomingGames:Game[];
   ladder:Ladder[];
 
-  constructor(private dataService: DataServiceService) { }
+  constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
+
 
   ngOnInit(){
     this.getAFLTeams();
     this.getR19Games();
     this.getR20Games();
     this.getLadder();
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
+
   }
 
   getAFLTeams(): void {

@@ -2,7 +2,10 @@ body {
 	background-color: lightblue;
 	padding-top: 120px;
   }
-  
+
+  header {
+	  color: aliceblue;
+  }
 	table {
 	  table-layout: fixed;
 	  width: 100%;

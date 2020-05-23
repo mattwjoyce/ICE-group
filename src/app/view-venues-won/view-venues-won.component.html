@@ -1,7 +1,7 @@
 <!-- Show venues where favourite team has won this season  -->
 <section id="venuesWon">
   <table style="text-align: center;">
-    <th colspan="1">Venues *favourite team* has won in this season<br><br></th>
+    <th colspan="1">Venues {{favouriteTeam.name}} has won in this season<br><br></th>
     <tr *ngFor="let venue of venues">
       <td>{{venue}}</td>
     </tr>

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataServiceService } from '../data-service.service';
 import { Tip } from '../tip';
-
+import { Team } from '../team';
+import { FavouriteTeamService } from '../favourite-team.service';
 @Component({
   selector: 'app-view-next-game-prediction',
   templateUrl: './view-next-game-prediction.component.html',
@@ -11,11 +12,14 @@ import { Tip } from '../tip';
 export class ViewNextGamePredictionComponent implements OnInit {
 
   tips:Tip[];
+  favouriteTeam:Team;
+  constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
-  constructor(private dataService: DataServiceService) { }
 
   ngOnInit() {
     this.getTips();
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
+
   }
 
   getTips(): void {

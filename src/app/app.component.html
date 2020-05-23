@@ -1,48 +1,112 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<!-- Toolbar with logos -->
-<div class = "container">
-
-	<div class = "row">
-		<div class="toolbar" role="banner">
-		   <input class = "teamLogo"  *ngFor="let team of teams" value="{{team.name}}" type = "image"  (click)="onSelect(team)"
-			   src="https://squiggle.com.au{{team.logo}}"
-			   title = {{team.name}}  alt = {{team.name}}>
-	   </div>
-
-   </div>
 
 
-<!--navbar-->
-<div class = "row">
-   <ul id="navigation_bar">
-	   <li> <div class ="logo">
-		   <a routerLink="/view-user-stories"> <img width="40" alt="AFL Logo" 
-			   src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=1200&height=630"></a>
-		   </div>	
-	  </li>
+<div style="display: flex;">
+	<!-- Top -->
+	<header>
+        <!-- Toolbar with logos -->
+				<div class="toolbar" role="banner">
+		 		  <input class = "teamLogo"  *ngFor="let team of teams" value="{{team.name}}" type = "image"  (click)="onSelect(team)"
+			  		 src="https://squiggle.com.au{{team.logo}}"
+			  		 title = {{team.name}}  alt = {{team.name}}>
+				   </div>
+
+		<!--navbar-->
+			<ul id="navigation_bar">
+				<li> <div class ="logo">
+					<a routerLink="/view-user-stories"> <img width="40" alt="AFL Logo" 
+						src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=1200&height=630"></a>
+					 </div>	
+				   </li>
+				<li> Team Explorer Pro</li>
+			</ul>
+	</header>
+
+	<br> <br>
+
+
+    <!-- Sidebar -->
+	<aside style="width: 30%;  margin-top: 20px; margin-left: 150px; margin-right:0px;">
+		<div class = "container">
+         <!-- Favourite Team card --> 
+		 <div *ngIf="favouriteTeam; else elseBlock">
+				<section id = favouriteTeamCard> 
+					<div class = "card text-center" style="width: 18rem;">
+					  <div class="card-header">Favourite Team</div>
+				
+						<div class="avatar mx-auto white"><img src="https://squiggle.com.au{{favouriteTeam.logo}}"></div>
+							<div class ="card-body">
+								<h5 class="font-weight-bold text-uppercase mb-3">
+								{{favouriteTeam.name}}
+								</h5><hr>
+								<p class="card-text"> balhblahblah
+								</p>
+							</div>
+						</div>
+					</section>
+					</div>
+
+						<ng-template #elseBlock> 
+							<section id = favouriteTeamCard> 
+								<div class = "card text-center" style="width: 18rem;">
+								  <div class="card-header">Favourite Team</div>
+									<div class="avatar mx-auto white">
+									<img src=""></div>
+								<div class ="card-body">
+								<h5 class="font-weight-bold text-uppercase mb-3">
+								Pick your favourite Team!
+								</h5><hr>
+								<p class="card-text"> balhblahblah
+								</p>
+							</div>
+						</div>
+						</section>
+						</ng-template>
+						
+							
+			<br> <br>
+		</div>
+	</aside>
+	
+
+
+    <!-- Main -->
+	<main style=" /* Make it scrollable */overflow: auto; margin-top: 20px; margin-right: 150px; margin-left: 0px;">
+		
+        <div class="container">
+
+		  <!-- tabs -->
+			<ul class="nav nav-tabs">
+				<li><a data-toggle="tab" routerLink="/view-user-stories">Home</a> </li>
+				<li><a data-toggle="tab" routerLink="/home-page">User Story 1</a></li>
+				<li ><a data-toggle="tab" routerLink="/view-next-game-prediction">User Story 2</a></li>
+				<li ><a data-toggle="tab" routerLink="/view-team-season-results">User Story 3</a></li>
+				<li ><a data-toggle="tab" routerLink="/view-next-five-games">User Story 4</a></li>
+				<li ><a data-toggle="tab" routerLink="/view-venues-won">User Story 5</a></li>
+			</ul>
+		  <!-- tab content -->
+		  <router-outlet></router-outlet>
+
+				  
+			  </div>
+	
 			
-		   <li><a routerLink="/home-page">User Story 1</a></li>
-		   <li ><a routerLink="/view-next-game-prediction">User Story 2</a></li>
-		   <li ><a  routerLink="/view-team-season-results">User Story 3</a></li>
-		   <li ><a  routerLink="/view-next-five-games">User Story 4</a></li>
-		   <li ><a  routerLink="/view-venues-won">User Story 5</a></li>
-		   <li ><a  routerLink="/">User Story 6</a></li>
-		   <li ><a  routerLink="/">User Story 7</a></li>
-		   <li ><a  routerLink="/">User Story 8</a></li>
-   </ul>
+	</main>
 
-   <!-- Team Explorer Pro !! =D -->
-<div class = "row"> 
-   <div class = "TEP"> <strong>Team Explorer Pro </strong>
-</div>
-<p *ngIf="favouriteTeam"> favourite team = {{favouriteTeam.name}} </p>
+
+
+			<!-- next upcoming match -->
+
+	
+    <footer>
+     
+    </footer>
 </div>
 
- <main>
-	   <router-outlet></router-outlet>    
-   </main>
 
-</div>
-</div> 
+
+
+
+
