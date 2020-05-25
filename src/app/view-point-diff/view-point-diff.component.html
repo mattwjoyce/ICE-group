@@ -1,0 +1,25 @@
+<!-- Display largest win by a team this season -->
+<div class="container">
+  <div class="row">
+    <div class = "col">
+      <section id="pointDiff">
+        <table style="text-align: center;">
+          <th colspan="4">Largest margin of victory this season<br><br></th>
+          <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Score</th>
+            <th>Pts won by</th>
+          </tr>
+          <tr>
+            <td>{{completedGames[0].hteam}}</td>
+            <td>{{completedGames[0].ateam}}</td>
+            <td>{{completedGames[0].hscore}}-{{completedGames[0].ascore}}</td>
+            <td *ngIf="completedGames[0].hscore > completedGames[0].ascore">{{completedGames[0].hscore-completedGames[0].ascore}}</td>
+            <td *ngIf="completedGames[0].ascore > completedGames[0].hscore || completedGames[0].ascore == completedGames[0].hscore" >{{completedGames[0].ascore-completedGames[0].hscore}}</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

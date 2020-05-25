@@ -10,9 +10,12 @@ import { ViewTeamSeasonResultsComponent } from './view-team-season-results/view-
 import { ViewNextFiveGamesComponent } from './view-next-five-games/view-next-five-games.component';
 import { ViewVenuesWonComponent } from './view-venues-won/view-venues-won.component';
 import { ViewRivalGamesComponent } from './view-rival-games/view-rival-games.component';
+import { ViewPointDiffComponent } from './view-point-diff/view-point-diff.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomePageComponent},
+  //remove view-teams path if not being used
   { path: 'view-teams', component: ViewTeamsComponent },
   { path: 'view-user-stories' , component: ViewUserStoriesComponent},
   { path: 'home-page', component: HomePageComponent },
@@ -20,7 +23,8 @@ const routes: Routes = [
   { path: 'view-team-season-results', component: ViewTeamSeasonResultsComponent },
   { path: 'view-next-five-games', component: ViewNextFiveGamesComponent },
   { path: 'view-venues-won', component: ViewVenuesWonComponent},
-  { path: 'view-rival-games', component: ViewRivalGamesComponent}
+  { path: 'view-rival-games', component: ViewRivalGamesComponent},
+  { path: 'view-point-diff', component: ViewPointDiffComponent}
 ];
 
 @NgModule({
