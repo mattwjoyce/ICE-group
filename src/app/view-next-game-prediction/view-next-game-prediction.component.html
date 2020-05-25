@@ -1,7 +1,7 @@
 <!-- Display if favourite team is predicted to win or lose next game using Squiggle source  -->
 <div id="tipResult">
   <table>
-    <th colspan="3">Round 20 Prediction for {{favouriteTeam.name}}| Source: Squiggle<br><br></th>
+    <th colspan="3">Round 20 Prediction for {{favouriteTeam.name}} | Source: Squiggle<br><br></th>
     <tr>
       <th>Home Team</th>
       <th>Away Team</th>
@@ -13,7 +13,7 @@
         <ng-container *ngIf="tip.hteam == favouriteTeam.name || tip.ateam == favouriteTeam.name">
           <td>{{tip.hteam}}</td>
           <td>{{tip.ateam}}</td>
-          <td style="background-color: greenyellow; color: black;">{{tip.tip}}</td>
+          <td>{{tip.tip}}</td>
         </ng-container>
       </ng-container>
     </tr>
