@@ -7,7 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class FavouriteTeamService {
 
-  
+  /**Selecting favourite team  */
   private _selectedTeamSource: BehaviorSubject<Team> = new BehaviorSubject(null);
   
   getFavouriteTeam(): Observable<Team> {
@@ -19,6 +19,20 @@ export class FavouriteTeamService {
   setFavouriteTeam(Team) {
     this._selectedTeamSource.next(Team);
   }
+
+  /**Selecting rival team */ 
+
+  private _rivalTeamSource: BehaviorSubject<Team> = new BehaviorSubject(null);
+
+  getRivalTeam(): Observable<Team> 
+  {
+    return this._rivalTeamSource.asObservable();
+  }
+
+  setRivalTeam(Team) {
+    this._rivalTeamSource.asObservable(); 
+  }
+  
   
 }
 

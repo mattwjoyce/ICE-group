@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   favouriteTeam:Team; 
   teams:Team[];
   upcomingGames:Game[];
+  rivalTeam:Team; 
 
   constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
     this.getR20Games();
   // data for other components 
     this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
+    this.FavouriteTeamService.getRivalTeam().subscribe(team => this.rivalTeam = team);
   }
 
 
@@ -62,5 +64,13 @@ export class AppComponent implements OnInit {
     this.FavouriteTeamService.setFavouriteTeam(this.favouriteTeam); 
   }
 
+  /**select rival team  */
+  clicked(rival:Team): void{
+    this.rivalTeam = rival; 
+    this.FavouriteTeamService.setRivalTeam(this.rivalTeam); 
+  }
 
+
+
+ 
 }
