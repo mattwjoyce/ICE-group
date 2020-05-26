@@ -1,49 +1,12 @@
 <!-- Results for favourite team vs chosen rival  -->
 <!-- Sidebar -->
-<aside>
-  <div class = "container">
-       <!-- Rival Team card --> 
-   <div *ngIf="favouriteTeam; else elseBlock">
-      <section id = rivalTeamCard> 
-        <div class = "card text-center" style="width: 18rem;">
-          <div class="card-header">Rival Team</div>
-      
-          <div class="avatar mx-auto white"><img src=""></div>
-            <div class ="card-body">
-              <h5 class="font-weight-bold text-uppercase mb-3">*rivalTeam name*</h5><hr>
-              <p class="card-text"> balhblahblah
-              </p>
-            </div>
-          </div>
-        </section>
-        </div>
+ <div class = "container">
 
-          <ng-template #elseBlock> 
-            <section id = rivalTeamCard> 
-              <div class = "card text-center" style="width: 18rem;">
-                <div class="card-header">Rival Team</div>
-                <div class="avatar mx-auto white">
-                <img src=""></div>
-              <div class ="card-body">
-              <h5 class="font-weight-bold text-uppercase mb-3">
-              Pick your rival Team!
-              </h5><hr>
-              <p class="card-text"> balhblahblah
-              </p>
-            </div>
-          </div>
-          </section>
-          </ng-template>          
-            
-    <br> <br>
-  </div>
-</aside>
-
-<!-- Display fixtures of favouriteTeam vs rivalTeam -->
+  <!-- Display fixtures of favouriteTeam vs rivalTeam -->
 
 <section id="completedResults">
   <table style="text-align: center;">
-    <th colspan="5">{{favouriteTeam.name}} vs *rival team* games this season<br><br></th>
+    <th colspan="5">{{favouriteTeam.name}} vs {{rivalTeam.name}} games this season<br><br></th>
     <tr>
       <th>Round</th>
       <th>Home Team</th>
@@ -53,7 +16,7 @@
     </tr>
     <tr *ngFor="let game of games">
       <!-- change hardcoded to dynamic rivalTeam -->
-      <ng-container *ngIf="(game.hteam == favouriteTeam.name && game.ateam == 'Carlton') || (game.ateam == favouriteTeam.name && game.hteam == 'Carlton')">
+      <ng-container *ngIf="(game.hteam == favouriteTeam.name && game.ateam == rivalTeam.name) || (game.ateam == favouriteTeam.name && game.hteam == rivalTeam.name)">
         <td>{{game.round}}</td>
         <td>{{game.hteam}}</td>
         <td>{{game.ateam}}</td>
@@ -63,3 +26,7 @@
     </tr>
   </table>
 </section>
+
+</div>
+
+
