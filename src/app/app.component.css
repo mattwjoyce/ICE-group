@@ -7,11 +7,6 @@ main {
   text-align: center;
 }
 
-aside {
-  border-style: solid;
-}
-
-
 /* team logo */
 .toolbar {
     position: absolute;
@@ -82,11 +77,6 @@ aside {
   li.dropdown {
     display: inline-block;
   }
-  
- 
-
-
-
   
   .active {
     background-color: #4CAF50;

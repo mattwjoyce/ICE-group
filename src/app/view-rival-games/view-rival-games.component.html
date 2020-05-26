@@ -52,7 +52,8 @@
       <th>Winner</th>
     </tr>
     <tr *ngFor="let game of games">
-      <ng-container *ngIf="(game.hteam == favouriteTeam && game.ateam == 'Carlton') || (game.ateam == favouriteTeam && game.hteam == 'Carlton')">
+      <!-- change hardcoded to dynamic rivalTeam -->
+      <ng-container *ngIf="(game.hteam == favouriteTeam.name && game.ateam == 'Carlton') || (game.ateam == favouriteTeam.name && game.hteam == 'Carlton')">
         <td>{{game.round}}</td>
         <td>{{game.hteam}}</td>
         <td>{{game.ateam}}</td>
