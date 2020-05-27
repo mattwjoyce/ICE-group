@@ -65,8 +65,8 @@ export class AppComponent implements OnInit {
   }
 
   /**select rival team  */
-  clicked(rival:Team): void{
-    this.rivalTeam = rival; 
+  clicked(team:Team): void{
+    this.rivalTeam = team; 
     this.FavouriteTeamService.setRivalTeam(this.rivalTeam); 
   }
 

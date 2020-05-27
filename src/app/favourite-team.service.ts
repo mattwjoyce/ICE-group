@@ -30,7 +30,7 @@ export class FavouriteTeamService {
   }
 
   setRivalTeam(Team) {
-    this._rivalTeamSource.asObservable(); 
+    this._rivalTeamSource.next(Team); 
   }
   
   
