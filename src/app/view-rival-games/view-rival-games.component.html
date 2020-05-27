@@ -1,32 +1,25 @@
 <!-- Results for favourite team vs chosen rival  -->
-<!-- Sidebar -->
- <div class = "container">
+<div class="container">
 
-  <!-- Display fixtures of favouriteTeam vs rivalTeam -->
+  <section id="rivalGames">
 
-<section id="completedResults">
-  <table style="text-align: center;">
-    <th colspan="5">{{favouriteTeam.name}} vs {{rivalTeam.name}} games this season<br><br></th>
-    <tr>
-      <th>Round</th>
-      <th>Home Team</th>
-      <th>Away Team</th>
-      <th>Score</th>
-      <th>Winner</th>
-    </tr>
-    <tr *ngFor="let game of games">
-      <!-- change hardcoded to dynamic rivalTeam -->
-      <ng-container *ngIf="(game.hteam == favouriteTeam.name && game.ateam == rivalTeam.name) || (game.ateam == favouriteTeam.name && game.hteam == rivalTeam.name)">
+    <table style="text-align: center;">
+      <th colspan="5">{{favouriteTeam.name}} vs {{rivalTeam.name}} games this season<br><br></th>
+      <tr>
+        <th>Round</th>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Score</th>
+        <th>Winner</th>
+      </tr>
+      <tr *ngFor="let game of rivalGames">
         <td>{{game.round}}</td>
         <td>{{game.hteam}}</td>
         <td>{{game.ateam}}</td>
         <td *ngIf="game.round < 19">{{game.hscore}}-{{game.ascore}}</td>
         <td *ngIf="game.round < 19">{{game.winner}}</td>
-      </ng-container>
-    </tr>
-  </table>
-</section>
-
+      </tr>
+    </table>
+  
+  </section>
 </div>
-
-

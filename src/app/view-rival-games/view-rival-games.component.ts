@@ -10,11 +10,9 @@ import { FavouriteTeamService } from '../favourite-team.service';
 })
 export class ViewRivalGamesComponent implements OnInit {
 
-  games:Game[];
-  teams:Team[];
   favouriteTeam:Team;
   rivalTeam:Team; 
-  
+  rivalGames:Game[];
 
   
 
@@ -23,16 +21,29 @@ export class ViewRivalGamesComponent implements OnInit {
   ngOnInit() {
     this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
     this.FavouriteTeamService.getRivalTeam().subscribe(team => this.rivalTeam = team);
-    this.get2019Games();
+    this.getRivalGames();
+
+  }
+
+  getRivalGames(): void{
+    this.dataService.get2019Games().subscribe(temp => {
+
+      var tempArr = [];
+
+      // loop through array of 2019 games, find games with favourite team and round 20 onwards
+
+
+      temp.forEach(element => {
+        if((element.hteam == this.favouriteTeam.name && element.ateam == this.rivalTeam.name || 
+          element.ateam == this.favouriteTeam.name  && element.hteam == this.rivalTeam.name) && element.round > 19) 
+          tempArr.push(element);
+      });
+
+      this.rivalGames = tempArr;
+    });
   }
 
   
-  get2019Games(): void {
-    this.dataService.get2019Games().subscribe(temp => { this.games = temp;});
-  }
-
-  getAFLTeams(): void {
-    this.dataService.getTeams().subscribe(temp => { this.teams = temp;});
-  }
+  
 
 }
