@@ -86,19 +86,8 @@ main {
 
   .card.text-center
   {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
    
     
   }
-
-  /* Tabs */
-
-.nav.nav-tabs{
-
-  border: none;
-    color:#fff;
-    background:#333;
-    border-radius:0;
-
-}
 
