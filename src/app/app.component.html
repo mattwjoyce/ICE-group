@@ -39,9 +39,9 @@
 		 <div *ngIf="favouriteTeam; else elseBlock">
 				<section id = favouriteTeamCard> 
 					<div class = "card text-center" style="width: 18rem;">
-					  <div class="card-header">Favourite Team</div>
+					  <div class="card-header" style="background-color:#333; color: white; ">Favourite Team</div>
 				
-						<div class="avatar mx-auto white"><img src="https://squiggle.com.au{{favouriteTeam.logo}}"></div>
+						<div class="avatar mx-auto white"><br><img src="https://squiggle.com.au{{favouriteTeam.logo}}"></div>
 							<div class ="card-body">
 								<h5 class="font-weight-bold text-uppercase mb-3">
 								{{favouriteTeam.name}}
@@ -58,7 +58,7 @@
 						<ng-template #elseBlock> 
 							<section id = favouriteTeamCard> 
 								<div class = "card text-center" style="width: 18rem;">
-								  <div class="card-header">Favourite Team</div>
+								  <div class="card-header" style="background-color:#333; color: white; ">Favourite Team</div>
 									<div class="avatar mx-auto white">
 									<img src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=240&height=126"></div>
 								<div class ="card-body">
@@ -84,9 +84,9 @@
 			<div *ngIf="rivalTeam">
 				<section id = rivalTeamCard>
 				  <div class = "card text-center" style="width: 18rem;">
-					<div class="card-header">Rival Team</div>
+					<div class="card-header" style="background-color:#333; color: white; ">Rival Team</div>
 				
-					  <div class="avatar mx-auto white"><img src="https://squiggle.com.au{{rivalTeam.logo}}"></div>
+					  <div class="avatar mx-auto white"><br><img src="https://squiggle.com.au{{rivalTeam.logo}}"></div>
 						<div class ="card-body">
 						  <h5 class="font-weight-bold text-uppercase mb-3">
 						  {{rivalTeam.name}}
@@ -104,7 +104,7 @@
 			  <div *ngIf="!rivalTeam">
 				<section id = rivalTeamCard> 
 				  <div class = "card text-center" style="width: 18rem;">
-					<div class="card-header">Rival Team</div>
+					<div class="card-header" style="background-color:grey; color: white; ">Rival Team</div>
 					<div class="avatar mx-auto white">
 					<img src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=240&height=126"></div>
 				  <div class ="card-body">
@@ -146,7 +146,7 @@
 				<li><a data-toggle="tab" routerLink="/">User Story 8</a></li>
 			</ul>
 		  <!-- tab content -->
-
+		  <br>
 		  <router-outlet></router-outlet>
 			  
 			
