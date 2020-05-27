@@ -11,6 +11,7 @@ import { ViewNextFiveGamesComponent } from './view-next-five-games/view-next-fiv
 import { ViewVenuesWonComponent } from './view-venues-won/view-venues-won.component';
 import { ViewRivalGamesComponent } from './view-rival-games/view-rival-games.component';
 import { ViewPointDiffComponent } from './view-point-diff/view-point-diff.component';
+import { ViewLowAvgMaxComponent } from './view-low-avg-max/view-low-avg-max.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'view-next-five-games', component: ViewNextFiveGamesComponent },
   { path: 'view-venues-won', component: ViewVenuesWonComponent},
   { path: 'view-rival-games', component: ViewRivalGamesComponent},
-  { path: 'view-point-diff', component: ViewPointDiffComponent}
+  { path: 'view-point-diff', component: ViewPointDiffComponent},
+  { path: 'view-low-avg-max', component: ViewLowAvgMaxComponent}
 ];
 
 @NgModule({

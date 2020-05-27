@@ -16,6 +16,8 @@ import { ViewNextFiveGamesComponent } from './view-next-five-games/view-next-fiv
 import { ViewVenuesWonComponent } from './view-venues-won/view-venues-won.component';
 import { ViewRivalGamesComponent } from './view-rival-games/view-rival-games.component';
 import { ViewPointDiffComponent } from './view-point-diff/view-point-diff.component';
+import { FavouriteTeamService } from './favourite-team.service';
+import { ViewLowAvgMaxComponent } from './view-low-avg-max/view-low-avg-max.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ViewPointDiffComponent } from './view-point-diff/view-point-diff.compon
     ViewNextFiveGamesComponent,
     ViewVenuesWonComponent,
     ViewRivalGamesComponent,
-    ViewPointDiffComponent
+    ViewPointDiffComponent,
+    ViewLowAvgMaxComponent
   ],
   imports: [
     BrowserModule,

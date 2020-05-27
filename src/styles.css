@@ -1,5 +1,5 @@
 body {
-	background-color:white;
+	background-color:lightblue;
 	padding-top: 120px;
   }
 
@@ -11,6 +11,7 @@ body {
   table {
 	font-family: 'Arial';
 	width: 100%;
+	background-color: aliceblue;
 	text-align: center;
 	table-layout: fixed;
 	border-collapse: collapse;
@@ -26,6 +27,11 @@ body {
 	  padding: 12px 35px;
 	  border-collapse: collapse;
 	}
+
+	td {
+		background-color: aliceblue;
+	}
+
 	th {
 	  background: #333;
 	  color: #fff;

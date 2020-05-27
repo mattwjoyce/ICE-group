@@ -16,8 +16,11 @@
         <td>{{game.round}}</td>
         <td>{{game.hteam}}</td>
         <td>{{game.ateam}}</td>
-        <td *ngIf="game.round < 19">{{game.hscore}}-{{game.ascore}}</td>
-        <td *ngIf="game.round < 19">{{game.winner}}</td>
+        <td>{{game.round < 20 ? game.hscore-game.ascore:null}}</td>
+        <td>{{game.round < 20 ? game.winner:null}}</td>
+        <ng-template #notPlayed>
+          
+        </ng-template>
       </tr>
     </table>
   

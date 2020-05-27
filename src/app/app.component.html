@@ -23,14 +23,14 @@
 				<li> <div class ="logo">
 					<a routerLink="/view-user-stories"> <img width="40" alt="AFL Logo" 
 						src="https://resources.afl.com.au/photo-resources/2019/12/05/9afccce2-87db-4a20-abcc-0c62c6516b3d/afl-logo.png?width=1200&height=630"></a></div>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/home-page">User Story 1</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-next-game-prediction">User Story 2</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-team-season-results">User Story 3</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-next-five-games">User Story 4</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-venues-won">User Story 5</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-rival-games">User Story 6</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/view-point-diff">User Story 7</a></li>
-				<li [hidden]="!favouriteTeam"><a  routerLink="/">User Story 8</a></li>
+				<li><a  routerLink="/home-page">User Story 1</a></li>
+				<li><a  routerLink="/view-next-game-prediction">User Story 2</a></li>
+				<li><a  routerLink="/view-team-season-results">User Story 3</a></li>
+				<li><a  routerLink="/view-next-five-games">User Story 4</a></li>
+				<li><a  routerLink="/view-venues-won">User Story 5</a></li>
+				<li><a  routerLink="/view-rival-games">User Story 6</a></li>
+				<li><a  routerLink="/view-point-diff">User Story 7</a></li>
+				<li><a  routerLink="/view-low-avg-max">User Story 8</a></li>
 
 			</ul>
 	
@@ -57,6 +57,9 @@
 								</h5><hr>
 								<p class="card-text"> You've selected your favourite team. 
 								</p>
+								<input class = "teamLogo"  *ngFor="let team of teams" value="{{team.name}}" type = "image"  (click)="onSelect(team)"
+								src="https://squiggle.com.au{{team.logo}}"
+								title = {{team.name}}  alt = {{team.name}}>
 							</div>
 						</div>
 					</section>
@@ -101,7 +104,10 @@
 						  {{rivalTeam.name}}
 						  </h5><hr>
 						  <p class="card-text"> You've selected your team's rival. 
-						  </p>
+							</p>
+							<input class = "teamLogo"  *ngFor="let team of teams" value="{{team.name}}" type = "image"  (click)="clicked(team)"
+							src="https://squiggle.com.au{{team.logo}}"
+							title = {{team.name}}  alt = {{team.name}}>
 						</div>
 					  </div>
 				

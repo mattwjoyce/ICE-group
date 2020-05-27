@@ -21,7 +21,7 @@ export class ViewPointDiffComponent implements OnInit {
     this.dataService.get2019Games().subscribe(temp => { 
       var tempArr = [];
 
-      // loop through array of 2019 games, find games before round 20
+      // loop through array of 2019 games, find games before round 20 and sort by point differential
       temp.forEach(element => {
         if(element.round < 20) tempArr.push(element);
       });
@@ -31,15 +31,18 @@ export class ViewPointDiffComponent implements OnInit {
     });
   }
 
+  
   sortGamesByPointDiff(a, b) {
     var gameAdiff = 0;
     var gameBdiff = 0;
+    // calculate difference in game A
     if (a.ascore > a.hscore) {
       gameAdiff = a.ascore - a.hscore;
     } else {
       gameAdiff = a.hscore - a.ascore;
     }
 
+    // calculate difference in game B
     if (b.ascore > b.hscore) {
       gameBdiff = b.ascore - b.hscore;
     } else {
@@ -48,7 +51,7 @@ export class ViewPointDiffComponent implements OnInit {
         
     let compare = 0;
 
-    
+    // sort games by difference calculated earlier
     if(gameAdiff < gameBdiff) {
       compare = 1;
     } else if (gameAdiff > gameBdiff) {

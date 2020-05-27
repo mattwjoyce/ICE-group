@@ -4,7 +4,7 @@
     <div class = "col">
       <section id="pointDiff">
         <table style="text-align: center;">
-          <th colspan="4">Largest margin of victory this season<br><br></th>
+          <th colspan="4">Largest margin of victory this season across all teams<br><br></th>
           <tr>
             <th>Home Team</th>
             <th>Away Team</th>
@@ -23,31 +23,3 @@
     </div>
   </div>
 </div>
-
-<!-- Display largest wins this season
-<div class="container">
-  <div class="row">
-    <div class = "col">
-      <section id="pointDiff">
-        <table style="text-align: center;">
-          <th colspan="5">Largest margin of victory this season<br><br></th>
-          <tr>
-            <th>Round</th>
-            <th>Home Team</th>
-            <th>Away Team</th>
-            <th>Score</th>
-            <th>Pts won by</th>
-          </tr>
-          <tr *ngFor="let game of completedGames">
-            <th>{{game.round}}</th>
-            <td>{{game.hteam}}</td>
-            <td>{{game.ateam}}</td>
-            <td>{{game.hscore}}-{{game.ascore}}</td>
-            <td *ngIf="game.hscore > game.ascore">{{game.hscore-game.ascore}}</td>
-            <td *ngIf="game.ascore > game.hscore || game.ascore == game.hscore" >{{game.ascore-game.hscore}}</td>
-          </tr>
-        </table>
-      </section>
-    </div>
-  </div>
-</div> -->

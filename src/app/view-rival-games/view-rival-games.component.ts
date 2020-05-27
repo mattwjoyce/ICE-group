@@ -34,8 +34,8 @@ export class ViewRivalGamesComponent implements OnInit {
 
 
       temp.forEach(element => {
-        if((element.hteam == this.favouriteTeam.name && element.ateam == this.rivalTeam.name || 
-          element.ateam == this.favouriteTeam.name  && element.hteam == this.rivalTeam.name) && element.round > 19) 
+        if((element.hteam == this.favouriteTeam.name && element.ateam == this.rivalTeam.name) || 
+          element.ateam == this.favouriteTeam.name  && element.hteam == this.rivalTeam.name) 
           tempArr.push(element);
       });
 

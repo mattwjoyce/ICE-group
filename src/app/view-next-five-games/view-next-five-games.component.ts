@@ -11,9 +11,7 @@ import { FavouriteTeamService } from '../favourite-team.service';
 })
 export class ViewNextFiveGamesComponent implements OnInit {
 
-favouriteTeam: Team;
-
-
+  favouriteTeam: Team;
   nextFiveGames:Game[];
   constructor(private dataService: DataServiceService,private FavouriteTeamService:FavouriteTeamService) { }
 

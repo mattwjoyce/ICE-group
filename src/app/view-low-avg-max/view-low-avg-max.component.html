@@ -1,0 +1,18 @@
+<!-- Calculate max score of favourite team -->
+<section id="lowAvgMax">
+  <table style="text-align: center;">
+    <th colspan="4">Max points scored by {{favouriteTeam.name}} this season<br><br></th>
+    <tr>
+      <th>Round</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Score</th>
+    </tr>
+    <tr *ngFor="let game of games">
+      <td>{{game.round}}</td>
+      <td>{{game.hteam}}</td>
+      <td>{{game.ateam}}</td>
+      <td>{{game.hscore}}-{{game.ascore}}</td>
+    </tr>
+  </table>
+</section>
