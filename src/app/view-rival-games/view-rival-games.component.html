@@ -4,7 +4,7 @@
   <section id="rivalGames">
 
     <table style="text-align: center;">
-      <th colspan="5">{{favouriteTeam.name}} vs {{rivalTeam.name}} games this season<br><br></th>
+      <th colspan="5" *ngIf="favouriteTeam && rivalTeam; else elseBlock">{{favouriteTeam.name}} vs {{rivalTeam.name}} games this season<br><br></th>
       <tr>
         <th>Round</th>
         <th>Home Team</th>
@@ -26,3 +26,7 @@
   
   </section>
 </div>
+
+<ng-template #elseBlock>
+  <th colspan="5">Please select a favourite and rival team then navigate back here<br><br></th>
+</ng-template>
