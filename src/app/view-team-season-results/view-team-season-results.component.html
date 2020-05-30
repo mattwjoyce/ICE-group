@@ -1,7 +1,10 @@
 <!-- Results for favourite team in each completed round  -->
 <section id="completedResults">
   <table style="text-align: center;">
-    <th colspan="5">{{favouriteTeam.name}} results for all completed rounds<br><br></th>
+    <th colspan="5" *ngIf="favouriteTeam; else elseBlock">{{favouriteTeam.name}} results for all completed rounds<br><br></th>
+    <ng-template #elseBlock>
+      <th colspan="5">Please select a favourite team then navigate back here<br><br></th>
+    </ng-template>
     <tr>
       <th>Round</th>
       <th>Home Team</th>
@@ -17,4 +20,6 @@
       <td>{{game.winner}}</td>
     </tr>
   </table>
+  
 </section>
+

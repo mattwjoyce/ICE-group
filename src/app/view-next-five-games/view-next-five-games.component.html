@@ -3,7 +3,7 @@
   <section id="nextFive">
 
     <table style="text-align: center;">
-      <th colspan="4">Next 5 games for {{favouriteTeam.name}}<br><br></th>
+      <th colspan="4" *ngIf="favouriteTeam; else elseBlock">Next 5 games for {{favouriteTeam.name}}<br><br></th>
       <tr>
         <th>Round</th>
         <th>Home Team</th>
@@ -20,3 +20,7 @@
   
   </section>
 </div>
+
+<ng-template #elseBlock>
+  <th colspan="4">Please select a favourite team then navigate back here<br><br></th>
+</ng-template>

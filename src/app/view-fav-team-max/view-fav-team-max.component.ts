@@ -5,14 +5,15 @@ import { DataServiceService } from '../data-service.service';
 import { FavouriteTeamService } from '../favourite-team.service';
 
 @Component({
-  selector: 'app-view-low-avg-max',
-  templateUrl: './view-low-avg-max.component.html',
-  styleUrls: ['./view-low-avg-max.component.css']
+  selector: 'app-view-fav-team-max',
+  templateUrl: './view-fav-team-max.component.html',
+  styleUrls: ['./view-fav-team-max.component.css']
 })
-export class ViewLowAvgMaxComponent implements OnInit {
+export class ViewFavTeamMaxComponent implements OnInit {
 
   games:Game[];
-  favouriteTeam: Team;  
+  favouriteTeam: Team;
+  
 
   constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
@@ -63,8 +64,4 @@ export class ViewLowAvgMaxComponent implements OnInit {
 
     return compare;
   } 
-
-
-
 }
-

@@ -1,9 +1,16 @@
 <!-- Show venues where favourite team has won this season  -->
 <section id="venuesWon">
   <table style="text-align: center;">
-    <th colspan="1">Venues {{favouriteTeam.name}} has won in this season<br><br></th>
+    <th colspan="1" *ngIf="favouriteTeam; else elseBlock">Venues {{favouriteTeam.name}} has won in this season<br><br></th>
+    <tr>
+      <th>Venue Name</th>
+    </tr>
     <tr *ngFor="let venue of venues">
       <td>{{venue}}</td>
     </tr>
   </table>
 </section>
+
+<ng-template #elseBlock>
+  <th colspan="1">Please select a favourite team then navigate back here<br><br></th>
+</ng-template>

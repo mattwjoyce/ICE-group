@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ViewTeamsComponent } from './view-teams/view-teams.component';
 import { ViewUserStoriesComponent } from './view-user-stories/view-user-stories.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ViewNextGamePredictionComponent } from './view-next-game-prediction/view-next-game-prediction.component';
@@ -11,13 +10,11 @@ import { ViewNextFiveGamesComponent } from './view-next-five-games/view-next-fiv
 import { ViewVenuesWonComponent } from './view-venues-won/view-venues-won.component';
 import { ViewRivalGamesComponent } from './view-rival-games/view-rival-games.component';
 import { ViewPointDiffComponent } from './view-point-diff/view-point-diff.component';
-import { ViewLowAvgMaxComponent } from './view-low-avg-max/view-low-avg-max.component';
+import { ViewFavTeamMaxComponent } from './view-fav-team-max/view-fav-team-max.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
-  //remove view-teams path if not being used
-  { path: 'view-teams', component: ViewTeamsComponent },
   { path: 'view-user-stories' , component: ViewUserStoriesComponent},
   { path: 'home-page', component: HomePageComponent },
   { path: 'view-next-game-prediction', component: ViewNextGamePredictionComponent},
@@ -26,7 +23,7 @@ const routes: Routes = [
   { path: 'view-venues-won', component: ViewVenuesWonComponent},
   { path: 'view-rival-games', component: ViewRivalGamesComponent},
   { path: 'view-point-diff', component: ViewPointDiffComponent},
-  { path: 'view-low-avg-max', component: ViewLowAvgMaxComponent}
+  { path: 'view-fav-team-max', component: ViewFavTeamMaxComponent}
 ];
 
 @NgModule({

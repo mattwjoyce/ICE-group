@@ -1,7 +1,10 @@
 <!-- Display if favourite team is predicted to win or lose next game using Squiggle source  -->
 <div id="tipResult">
   <table>
-    <th colspan="3">Round 20 Prediction for {{favouriteTeam.name}} | Source: Squiggle<br><br></th>
+    <th colspan="3" *ngIf="favouriteTeam; else elseBlock">Round 20 Prediction for {{favouriteTeam.name}} | Source: Squiggle<br><br></th>
+    <ng-template #elseBlock>
+      <th colspan="3">Please select a favourite team<br><br></th>
+    </ng-template>
     <tr>
       <th>Home Team</th>
       <th>Away Team</th>
@@ -19,3 +22,4 @@
     </tr>
   </table>
 </div>
+

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewTeamsComponent } from './view-teams.component';
+import { ViewFavTeamMaxComponent } from './view-fav-team-max.component';
 
-describe('ViewTeamsComponent', () => {
-  let component: ViewTeamsComponent;
-  let fixture: ComponentFixture<ViewTeamsComponent>;
+describe('ViewFavTeamMaxComponent', () => {
+  let component: ViewFavTeamMaxComponent;
+  let fixture: ComponentFixture<ViewFavTeamMaxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewTeamsComponent ]
+      declarations: [ ViewFavTeamMaxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewTeamsComponent);
+    fixture = TestBed.createComponent(ViewFavTeamMaxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

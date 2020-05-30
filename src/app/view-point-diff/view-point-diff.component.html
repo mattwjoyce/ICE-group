@@ -4,17 +4,20 @@
     <div class = "col">
       <section id="pointDiff">
         <table style="text-align: center;">
-          <th colspan="4">Largest margin of victory this season across all teams<br><br></th>
+          <th colspan="5">Largest margin of victory this season across all teams<br><br></th>
           <tr>
             <th>Home Team</th>
             <th>Away Team</th>
             <th>Score</th>
+            <th>Winner</th>
             <th>Pts won by</th>
           </tr>
           <tr>
             <td>{{completedGames[0].hteam}}</td>
             <td>{{completedGames[0].ateam}}</td>
             <td>{{completedGames[0].hscore}}-{{completedGames[0].ascore}}</td>
+            <td *ngIf="completedGames[0].winner == completedGames[0].hteam">{{completedGames[0].hteam}}</td>
+            <td *ngIf="completedGames[0].winner == completedGames[0].ateam">{{completedGames[0].ateam}}</td>
             <td *ngIf="completedGames[0].hscore > completedGames[0].ascore">{{completedGames[0].hscore-completedGames[0].ascore}}</td>
             <td *ngIf="completedGames[0].ascore > completedGames[0].hscore || completedGames[0].ascore == completedGames[0].hscore" >{{completedGames[0].ascore-completedGames[0].hscore}}</td>
           </tr>
