@@ -16,8 +16,8 @@
         <td>{{game.round}}</td>
         <td>{{game.hteam}}</td>
         <td>{{game.ateam}}</td>
-        <td>{{game.round < 20 ? game.hscore-game.ascore:null}}</td>
-        <td>{{game.round < 20 ? game.winner:null}}</td>
+        <td *ngIf="game.round < 20">{{game.hscore}}-{{game.ascore}}</td>
+        <td *ngIf="game.round < 20">{{game.winner}}</td>
         <ng-template #notPlayed>
           
         </ng-template>

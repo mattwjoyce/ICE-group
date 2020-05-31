@@ -19,8 +19,7 @@ export class ViewTeamSeasonResultsComponent implements OnInit {
 
   ngOnInit() {
     this.getFavCompletedGames();
-    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
- 
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team); 
   }
 
   getFavCompletedGames(): void{
