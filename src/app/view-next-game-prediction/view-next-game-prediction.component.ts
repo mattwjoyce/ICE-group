@@ -19,7 +19,6 @@ export class ViewNextGamePredictionComponent implements OnInit {
   ngOnInit() {
     this.getTips();
     this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
-
   }
 
   getTips(): void {

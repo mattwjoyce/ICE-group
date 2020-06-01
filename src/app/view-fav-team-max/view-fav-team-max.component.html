@@ -8,11 +8,11 @@
       <th>Away Team</th>
       <th>Score</th>
     </tr>
-    <tr *ngFor="let game of games">
-      <td>{{game.round}}</td>
-      <td>{{game.hteam}}</td>
-      <td>{{game.ateam}}</td>
-      <td>{{game.hscore}}-{{game.ascore}}</td>
+    <tr>
+      <td>{{games[0].round}}</td>
+      <td>{{games[0].hteam}}</td>
+      <td>{{games[0].ateam}}</td>
+      <td>{{games[0].hscore}}-{{games[0].ascore}}</td>
     </tr>
   </table>
 </section>

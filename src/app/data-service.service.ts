@@ -73,7 +73,8 @@ export class DataServiceService {
           item.agoals, 
           item.year, 
           item.date, 
-          item.id 
+          item.id
+ 
         ))) 
       );  
         } 
@@ -101,7 +102,7 @@ export class DataServiceService {
           item.agoals, 
           item.year, 
           item.date, 
-          item.id 
+          item.id
         ))) 
       );  
         }
@@ -129,7 +130,7 @@ export class DataServiceService {
           item.agoals, 
           item.year, 
           item.date, 
-          item.id 
+          item.id
         ))) 
       );  
         }
