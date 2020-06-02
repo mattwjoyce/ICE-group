@@ -18,8 +18,7 @@ export class ViewFavTeamMaxComponent implements OnInit {
   constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
   ngOnInit() {
-    this.getMaxScore();
-    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => {this.favouriteTeam = team; this.getMaxScore();});
   }
  
   getMaxScore(): void{

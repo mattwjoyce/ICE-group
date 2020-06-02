@@ -19,10 +19,8 @@ export class ViewRivalGamesComponent implements OnInit {
   constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
   ngOnInit() {
-    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
-    this.FavouriteTeamService.getRivalTeam().subscribe(team => this.rivalTeam = team);
-    this.getRivalGames();
-
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => { this.favouriteTeam = team; this.getRivalGames();});
+    this.FavouriteTeamService.getRivalTeam().subscribe(team => { this.rivalTeam = team; this.getRivalGames();});
   }
 
   getRivalGames(): void{

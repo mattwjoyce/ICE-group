@@ -17,9 +17,7 @@ export class ViewNextFiveGamesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getNextFiveGames();
-    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
- 
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => {this.favouriteTeam = team; this.getNextFiveGames();});
   }
 
   getNextFiveGames(): void{

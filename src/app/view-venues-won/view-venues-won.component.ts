@@ -17,9 +17,7 @@ export class ViewVenuesWonComponent implements OnInit {
   constructor(private dataService: DataServiceService, private FavouriteTeamService:FavouriteTeamService) { }
 
   ngOnInit() {
-    this.getVenuesWon();
-    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => this.favouriteTeam = team);
-    
+    this.FavouriteTeamService.getFavouriteTeam().subscribe(team => { this.favouriteTeam = team; this.getVenuesWon();});    
   }
 
   getVenuesWon(): void {
